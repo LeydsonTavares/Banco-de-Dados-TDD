@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaListarProjetoController">
+   <children>
+      <AnchorPane prefHeight="530.0" prefWidth="1270.0">
+         <children>
+            <TableView fx:id="tb_Projetos" layoutX="50.0" layoutY="117.0" onMouseClicked="#mouseClicado" prefHeight="334.0" prefWidth="1100.0">
+               <effect>
+                  <DropShadow />
+               </effect></TableView>
+            <Hyperlink fx:id="hl_pesquisaProjeto" layoutX="630.0" layoutY="65.0" onAction="#pesquisaProjeto" prefHeight="33.0" prefWidth="165.0" text="Pesquisar" textFill="#00ff22">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Hyperlink>
+            <TextField fx:id="txt_pesquisaProjeto" layoutX="50.0" layoutY="69.0" prefHeight="25.0" prefWidth="562.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <ComboBox fx:id="cbxTipoPesquisa" layoutX="50.0" layoutY="23.0" prefHeight="25.0" prefWidth="562.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ComboBox>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
