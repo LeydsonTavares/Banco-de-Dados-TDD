@@ -1,26 +1,26 @@
 package model;
 
-import java.util.LinkedList;
-import java.util.List;
-
 import exception.AlunolNullException;
 import exception.AlunolPeriodoInvalidoException;
 import exception.ProfessorIndisponivelException;
 import exception.ResponsavelNullException;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Projeto {
 
 	private Professor professor;
 	private Aluno aluno;
-	List<Aluno> equipe = new LinkedList<Aluno>();
-	List<Tecnologia> tecnologias = new LinkedList<Tecnologia>();
+	
+	private ObservableList<Aluno> equipe = FXCollections.observableArrayList();
+	private ObservableList<Tecnologia> tecnologias = FXCollections.observableArrayList();
 	private String dataInicio;
 	private String dataConclusao;
 	private String titulo;
 	private String link;
 	private String descricao;
 	private String area;
-	private String nomeResponsavel;
+	
 	
 
 	public void setResponsavel(Professor professor) throws ResponsavelNullException, ProfessorIndisponivelException {
@@ -51,7 +51,7 @@ public class Projeto {
 			throw new AlunolPeriodoInvalidoException();
 		}
 
-		this.aluno = aluno;
+		this.equipe.add(aluno);
 
 	}
 
@@ -105,7 +105,7 @@ public class Projeto {
 		return this.aluno;
 	}
 
-	public List<Aluno> getEquipe() {
+	public ObservableList<Aluno> getEquipe() {
 		return this.equipe;
 	}
 
@@ -121,7 +121,7 @@ public class Projeto {
 		return descricao;
 	}
 
-	public List<Tecnologia> getTecnologia() {
+	public ObservableList<Tecnologia> getTecnologia() {
 		return this.tecnologias;
 	}
 	

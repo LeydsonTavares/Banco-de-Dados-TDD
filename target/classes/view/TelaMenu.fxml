@@ -43,21 +43,21 @@
                      <tooltip>
                         <Tooltip text="Histórico Faturamento" />
                      </tooltip></Button>
-                  <Button fx:id="btnCadastroCliente" contentDisplay="TOP" layoutX="558.0" layoutY="10.0" mnemonicParsing="false" onAction="#cadastrar" opacity="0.0" prefHeight="105.0" prefWidth="115.0">
+                  <Button fx:id="btnCadastroProjeto" contentDisplay="TOP" layoutX="558.0" layoutY="10.0" mnemonicParsing="false" onAction="#cadastrar" opacity="0.0" prefHeight="105.0" prefWidth="115.0">
                      <tooltip>
                         <Tooltip text="Cadastro Cliente" />
                      </tooltip></Button>
-                  <ImageView disable="true" fitHeight="59.0" fitWidth="74.0" layoutX="42.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgMyProject" disable="true" fitHeight="59.0" fitWidth="74.0" layoutX="42.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icon/project-icon-25724.png" />
                      </image>
                   </ImageView>
-                  <ImageView disable="true" fitHeight="59.0" fitWidth="74.0" layoutX="317.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgTecnologias" disable="true" fitHeight="59.0" fitWidth="74.0" layoutX="317.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icon/tech%20icon.png" />
                      </image>
                   </ImageView>
-                  <ImageView disable="true" fitHeight="59.0" fitWidth="74.0" layoutX="170.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgOther" disable="true" fitHeight="59.0" fitWidth="74.0" layoutX="170.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icon/icon%20myProject.png" />
                      </image>
@@ -77,7 +77,7 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <ImageView disable="true" fitHeight="59.0" fitWidth="74.0" layoutX="452.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgAddEstudantes" disable="true" fitHeight="59.0" fitWidth="74.0" layoutX="452.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icon/icon%20addUsuario.png" />
                      </image>
@@ -87,6 +87,16 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
+                  <Label layoutX="563.0" layoutY="94.0" text="Register project" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imgCadastrarProjeto" disable="true" fitHeight="59.0" fitWidth="74.0" layoutX="586.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/icon%20vendas.png" />
+                     </image>
+                  </ImageView>
                </children>
             </Pane>
          </top>

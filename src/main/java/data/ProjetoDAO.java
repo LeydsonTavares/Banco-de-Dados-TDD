@@ -2,9 +2,7 @@ package data;
 
 import java.util.List;
 
-import model.Professor;
 import model.Projeto;
-import model.Tecnologia;
 
 public interface ProjetoDAO {
 	

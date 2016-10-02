@@ -11,6 +11,7 @@ public class Professor {
 	private String nome;
 	private String codigo;
 	private Projeto projeto;
+	public static Professor professorLogado = null;
 
 	public boolean getDisponibilidade() {
 		return disponibilidade;

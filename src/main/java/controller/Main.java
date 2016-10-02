@@ -17,7 +17,7 @@ public class Main extends Application {
 	public void start(Stage stage) throws Exception {
 		Parent prime = FXMLLoader.load(getClass().getResource("../view/TelaLogin.fxml"));
 		Scene cena = new Scene(prime);
-		stage.setScene(cena);	
+		stage.setScene(cena);
 		SCENE = cena;
 		stage.setTitle("");
 		stage.setResizable(false);

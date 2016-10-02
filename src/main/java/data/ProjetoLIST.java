@@ -18,10 +18,11 @@ public class ProjetoLIST implements ProjetoDAO {
 	
 	private List<Projeto> projetos = new LinkedList<Projeto>();
 	private List<Professor> professores = new LinkedList<Professor>();
-	private List<Aluno> alunos = new LinkedList<Aluno>();
-	private List<Tecnologia> tecnologias = new LinkedList<Tecnologia>();
+	public ObservableList<Aluno> alunos = FXCollections.observableArrayList();
+	public ObservableList<Tecnologia> tecnologias = FXCollections.observableArrayList();
 	
 	private ObservableList<Projeto> obsProjeto = FXCollections.observableArrayList();
+	
 	private static ProjetoLIST instance = new ProjetoLIST();
 
 	
@@ -194,7 +195,7 @@ public class ProjetoLIST implements ProjetoDAO {
 
 		p1.setCodigo("1010");
 		p1.setNome("Adriano Santos");
-		p1.setProjeto(pr1);
+		//p1.setProjeto(pr1);
 
 		p2.setCodigo("1011");
 		p2.setNome("Jemerson");
@@ -236,7 +237,7 @@ public class ProjetoLIST implements ProjetoDAO {
 		a1.setNome("Leydson Tavares");
 		a1.setPeriodo(5);
 
-		a2.setMatricula("1423080018");
+		a2.setMatricula("1423080012");
 		a2.setNome("Fernanda Mendonça");
 		a2.setPeriodo(5);
 
@@ -252,24 +253,24 @@ public class ProjetoLIST implements ProjetoDAO {
 		a5.setNome("Alberto Junior");
 		a5.setPeriodo(5);
 		
-		a6.setMatricula("1423080015");
-		a6.setNome("Alberto Junior");
+		a6.setMatricula("1423080016");
+		a6.setNome("Nesomar");
 		a6.setPeriodo(5);
 		
-		a7.setMatricula("1423080015");
-		a7.setNome("Alberto Junior");
+		a7.setMatricula("1423080017");
+		a7.setNome("Denner ");
 		a7.setPeriodo(5);
 		
-		a8.setMatricula("1423080015");
-		a8.setNome("Alberto Junior");
+		a8.setMatricula("1423080018");
+		a8.setNome("Arthur Martins");
 		a8.setPeriodo(5);
 		
-		a9.setMatricula("1423080015");
-		a9.setNome("Alberto Junior");
+		a9.setMatricula("1423080019");
+		a9.setNome("Jair Cavalcante");
 		a9.setPeriodo(5);
 		
-		a10.setMatricula("1423080015");
-		a10.setNome("Alberto Junior");
+		a10.setMatricula("1423080020");
+		a10.setNome("Bruno");
 		a10.setPeriodo(5);
 
 		pr1.setArea("Sistemas de Informação");
@@ -337,7 +338,7 @@ public class ProjetoLIST implements ProjetoDAO {
 		pr5.setAluno(a10);
 		
 		
-		projetos.add(pr1);
+		//projetos.add(pr1);
 		projetos.add(pr2);
 		projetos.add(pr3);
 		projetos.add(pr4);

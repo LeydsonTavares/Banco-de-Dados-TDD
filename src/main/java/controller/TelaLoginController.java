@@ -18,11 +18,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import model.Professor;
-import model.Projeto;
 
 public class TelaLoginController implements Initializable {
 
 	private ProjetoLIST gerenciador = ProjetoLIST.getInstance();
+	
 
 	@FXML
 	private TextField loginUsuario;
@@ -70,6 +70,7 @@ public class TelaLoginController implements Initializable {
 		for (Professor newProfessor : gerenciador.getProfessores()) {
 			if (newProfessor.getNome().equals(loginUsuario.getText())
 					&& newProfessor.getCodigo().equals(senhaUsuario.getText())) {
+				Professor.professorLogado = newProfessor;
 				Parent parent = FXMLLoader.load(getClass().getResource("../view/TelaMenu.fxml"));
 				Main.SCENE.setRoot(parent);
 				
