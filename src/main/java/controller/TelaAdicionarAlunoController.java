@@ -2,7 +2,9 @@ package controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import data.ProjetoLIST;
+
+import com.facisa.projetoBD2.dao.ProjetoLIST;
+
 import exception.AlunolNullException;
 import exception.AlunolPeriodoInvalidoException;
 import javafx.event.ActionEvent;
@@ -40,27 +42,37 @@ public class TelaAdicionarAlunoController implements Initializable {
 	}
 
 	@FXML
-	void adicionarAlunoEquipe(ActionEvent event) throws AlunolNullException, AlunolPeriodoInvalidoException {
+	void adicionarAlunoEquipe(ActionEvent event) {
 		if (selecionado != null) {
-			for (Aluno aluno : Professor.professorLogado.getProjeto().getEquipe()) {
-				if (aluno.equals(selecionado)) {
+
+			if (Professor.professorLogado.getProjeto().getEquipe() != null) {
+
+				if (Professor.professorLogado.getProjeto().getEquipe().contains(selecionado) == true) {
 
 					selecionado = null;
 					criaAlert(AlertType.INFORMATION, "Informação", "Aluno já se encontra cadastro nesse Projeto")
 							.show();
-
+				} else {
+					try {
+						Professor.professorLogado.getProjeto().setAluno(selecionado);
+					} catch (AlunolNullException | AlunolPeriodoInvalidoException e) {
+						criaAlert(AlertType.INFORMATION, "Informação", e.getMessage()).show();
+					}
+					selecionado = null;
 				}
 
-			}
-			if (selecionado != null) {
-				Professor.professorLogado.getProjeto().setAluno(selecionado);
+			}else {
+				try {
+					Professor.professorLogado.getProjeto().setAluno(selecionado);
+				} catch (AlunolNullException | AlunolPeriodoInvalidoException e) {
+					criaAlert(AlertType.INFORMATION, "Informação", e.getMessage()).show();
+				}
 				selecionado = null;
 
 			}
 
-		} else {
-			criaAlert(AlertType.ERROR, "Informação", "Selecione um Aluno ").show();
 		}
+
 	}
 
 	private Alert criaAlert(AlertType tipo, String string, String string2) {

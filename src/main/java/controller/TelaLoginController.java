@@ -3,7 +3,8 @@ package controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import data.ProjetoLIST;
+import com.facisa.projetoBD2.dao.ProjetoLIST;
+
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;

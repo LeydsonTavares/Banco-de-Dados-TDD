@@ -1,4 +1,4 @@
-package data;
+package com.facisa.projetoBD2.dao;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -48,6 +48,12 @@ public class ProjetoLIST implements ProjetoDAO {
 		this.projetos.add(projeto);
 
 	}
+	// retorna equipe do Projeto
+	public List<Aluno> equipeProjeto(Projeto projeto){
+		return alunos;
+		
+	}
+	
 
 	// Atualiza Projeto com novos Dados
 	public void atualizarProjeto(Projeto projeto) {

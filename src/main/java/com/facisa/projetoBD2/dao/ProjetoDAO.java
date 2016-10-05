@@ -1,4 +1,4 @@
-package data;
+package com.facisa.projetoBD2.dao;
 
 import java.util.List;
 
